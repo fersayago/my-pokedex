@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import searchPokemon from './../Api'
+import { searchPokemon}  from './../Api'
 
 const Searchbar = () => {
   const [search, setSearch] = useState("");

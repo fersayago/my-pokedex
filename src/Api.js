@@ -9,10 +9,10 @@ const searchPokemon = async (pokemon) => {
   }
 }
 
-const getPokemons = async () => {
+const getPokemons = async (limit=10, offset=0) => {
   try {
-    let fetchPokemonURL = `https://pokeapi.co/api/v2/pokemon/pokemon?limit=100&offset=200`
-    const response = await fetch(fetchPokemonURL)
+    let fetchPokemonsURL = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+    const response = await fetch(fetchPokemonsURL)
     const data = await response.json()
     return data;
   } catch (error) {
@@ -20,4 +20,7 @@ const getPokemons = async () => {
   }
 }
 
-export default {searchPokemon, getPokemons};
+export {
+  searchPokemon,
+  getPokemons
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Pokedex = () => {
+const Pokedex = (props) => {
+  const pokemons = props.pokemons;
+
   return (
     <div>
       <div className='header'>
@@ -8,15 +10,15 @@ const Pokedex = () => {
         <div>Pagination</div>
       </div>
       <div className='pokedex-grid'>
-        <div className="">1</div>
-        <div className="">2</div>
-        <div className="">3</div>
-        <div className="">4</div>
-        <div className="">5</div>
-        <div className="">6</div>
-        <div className="">7</div>
-        <div className="">8</div>
-        <div className="">9</div>
+        {
+          pokemons.map((pokemon, index) =>{
+            return (
+              <div key={pokemon.name}>
+                #{index+1}. {pokemon.name}
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   )
