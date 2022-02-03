@@ -15,28 +15,20 @@ const Searchbar = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className='searchbar-container'>
+      <div className='searchbar'>
         <input
           type="text"
           placeholder='buscar pokemon...'
           onChange={onChangeFunction}
         />
       </div>
-      <div>
+      <div className='searchbar-button'>
         <button
           onClick={onClickFunction}
         >
           Buscar
         </button>
-      </div>
-      <div>
-        {pokemon &&
-        <div>
-          <div>Nombre: {pokemon.name}</div>
-          <div>Peso: {pokemon.weight}</div>
-        </div>
-        }
       </div>
     </div>
   )
