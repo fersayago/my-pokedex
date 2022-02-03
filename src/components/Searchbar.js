@@ -1,15 +1,17 @@
-import React from 'react';
-const {useState} = React;
+import React, {useState} from 'react';
+import searchPokemon from './../Api'
 
 const Searchbar = () => {
   const [search, setSearch] = useState("");
+  const [pokemon, setPokemon] = useState();
 
   const onChangeFunction = (e) => {
     setSearch(e.target.value);
   }
 
-  const onClickFunction = () => {
-    alert('boton apreta3')
+  const onClickFunction = async (e) => {
+    const data = await searchPokemon(search.toLowerCase())
+    setPokemon(data);
   }
 
   return (
@@ -27,6 +29,14 @@ const Searchbar = () => {
         >
           Buscar
         </button>
+      </div>
+      <div>
+        {pokemon &&
+        <div>
+          <div>Nombre: {pokemon.name}</div>
+          <div>Peso: {pokemon.weight}</div>
+        </div>
+        }
       </div>
     </div>
   )
