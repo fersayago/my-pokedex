@@ -56,8 +56,8 @@ nav {
 
 .pokedex-grid {
   display: grid;
-  grid-auto-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
   padding: 0px 10px;
 }
 

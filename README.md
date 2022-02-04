@@ -21,5 +21,13 @@ La idea del proyecto es poder crear una pokedex para poder reforzar el uso de <b
 
 ## Cards como componente reutilizable
 
-Retomar 1:08:21
-https://www.youtube.com/watch?v=IFWvfZaKF_w
+1. creamos [Pokemon.js](src/components/Pokemon.js) que nos permitira darle forma de card a los distintos display de los pokemones
+2. Creamos el metodo getPokemonData en [Api.js](src/Api.js)
+3. Una vez que tenemos la informacion en el fetch general del pokemon debemos hacer una promise para poder hacer el fetch individual de cada pokemon para poder tener la información extra (peso, altura, numero, imagenes,etc). Podemos usar map para convertir pokemones en un array de promesas en [App.js](src/App.js)
+4. Configuraciones del CSS para las cards dentro de [Pokemon.css](src/componentes/Pokemon.css)
+
+## Pagination
+
+retomar 1:34:00
+https://www.youtube.com/watch?v=IFWvfZaKF_w&ab_channel=Codealo
+## Buscar Pokemones
