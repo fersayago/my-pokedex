@@ -1,5 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
+import Pagination from './Pagination'
 
 const Pokedex = (props) => {
   const pokemons = props.pokemons;
@@ -8,7 +9,12 @@ const Pokedex = (props) => {
     <div>
       <div className='header'>
         <h1>Pokedex</h1>
-        <div>Pagination</div>
+        <Pagination
+          onLeftClick={console.log("left")}
+          onRightClick={console.log("right")}
+          page={1}
+          totalPages={11}
+        />
       </div>
       <div className='pokedex-grid'>
         {

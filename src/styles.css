@@ -61,6 +61,12 @@ nav {
   padding: 0px 10px;
 }
 
+.pagination {
+  display: flex;
+  direction: row;
+  align-items: center;
+}
+
 .App {
   font-family: sans-serif;
 }
